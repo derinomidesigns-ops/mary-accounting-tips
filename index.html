@@ -1,0 +1,1069 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>US Bookkeeper & Accountant Roadmap — Philippines Edition</title>
+<style>
+  :root {
+    --teal:      #00838F;
+    --teal-dark: #006670;
+    --teal-lt:   #E6F4F5;
+    --pink:      #C4006E;
+    --pink-lt:   #FCE8F3;
+    --navy:      #1A1A2E;
+    --text:      #2D2D2D;
+    --subtext:   #555555;
+    --border:    #E2E2E2;
+    --bg:        #F7F8FA;
+    --white:     #FFFFFF;
+    --sidebar-w: 240px;
+  }
+
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  body { font-family: "Segoe UI", Arial, sans-serif; background: var(--bg); color: var(--text); font-size: 14px; }
+
+  /* ── TOP HEADER ─────────────────────────────────── */
+  .top-bar {
+    position: sticky; top: 0; z-index: 200;
+    background: var(--white);
+    border-bottom: 3px solid var(--teal);
+    display: flex; align-items: center;
+    padding: 0 28px; height: 60px;
+    box-shadow: 0 1px 4px rgba(0,0,0,0.08);
+  }
+  .logo { display: flex; align-items: center; gap: 10px; text-decoration: none; }
+  .logo-icon {
+    width: 36px; height: 36px; border-radius: 6px;
+    background: var(--teal); color: white;
+    display: flex; align-items: center; justify-content: center;
+    font-size: 18px; font-weight: 900;
+  }
+  .logo-text { line-height: 1.1; }
+  .logo-text .l1 { font-size: 16px; font-weight: 700; color: var(--navy); letter-spacing: -0.3px; }
+  .logo-text .l2 { font-size: 12px; color: var(--pink); font-weight: 600; }
+  .top-bar-title {
+    margin-left: 28px; padding-left: 28px;
+    border-left: 1px solid var(--border);
+    font-size: 14px; color: var(--subtext); font-weight: 500;
+  }
+
+  /* ── LAYOUT ──────────────────────────────────────── */
+  .layout { display: flex; min-height: calc(100vh - 60px); }
+
+  /* ── SIDEBAR ─────────────────────────────────────── */
+  .sidebar {
+    width: var(--sidebar-w); flex-shrink: 0;
+    background: var(--white);
+    border-right: 1px solid var(--border);
+    padding: 20px 0;
+    position: sticky; top: 60px;
+    height: calc(100vh - 60px);
+    overflow-y: auto;
+  }
+  .sidebar-section { margin-bottom: 4px; }
+  .sidebar-section-label {
+    font-size: 10px; font-weight: 700; color: var(--subtext);
+    text-transform: uppercase; letter-spacing: 1px;
+    padding: 14px 20px 6px;
+  }
+  .sidebar-link {
+    display: flex; align-items: center; gap: 9px;
+    padding: 8px 20px; text-decoration: none;
+    color: var(--text); font-size: 13px; font-weight: 500;
+    border-left: 3px solid transparent;
+    transition: background 0.15s, border-color 0.15s, color 0.15s;
+    cursor: pointer;
+  }
+  .sidebar-link:hover { background: var(--bg); color: var(--teal); }
+  .sidebar-link.active {
+    border-left-color: var(--pink);
+    background: var(--pink-lt);
+    color: var(--pink);
+    font-weight: 600;
+  }
+  .sidebar-link .s-icon { font-size: 14px; width: 18px; text-align: center; }
+  .sidebar-divider {
+    height: 1px; background: var(--border);
+    margin: 10px 16px;
+  }
+
+  /* ── MAIN ────────────────────────────────────────── */
+  .main { flex: 1; padding: 32px 36px; max-width: 960px; }
+
+  /* ── PAGE HEADER ─────────────────────────────────── */
+  .page-header { margin-bottom: 28px; }
+  .page-header h1 {
+    font-size: 26px; font-weight: 700; color: var(--navy);
+    margin-bottom: 6px; display: flex; align-items: center; gap: 10px;
+  }
+  .page-header .underline {
+    width: 48px; height: 3px; background: var(--pink);
+    border-radius: 2px; margin-bottom: 10px;
+  }
+  .page-header .subtitle { font-size: 14px; color: var(--subtext); }
+
+  /* ── SECTION TITLES ──────────────────────────────── */
+  .section { margin-bottom: 44px; scroll-margin-top: 80px; }
+  .section-title {
+    font-size: 11px; font-weight: 700; color: var(--teal);
+    text-transform: uppercase; letter-spacing: 1.5px;
+    margin-bottom: 12px;
+    display: flex; align-items: center; gap: 8px;
+  }
+  .section-title::after {
+    content: ''; flex: 1; height: 1px; background: var(--border);
+  }
+
+  /* ── CARD GRID ───────────────────────────────────── */
+  .card-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 14px; }
+  .card-grid-2 { grid-template-columns: repeat(2, 1fr); }
+  .card-grid-full { grid-template-columns: 1fr; }
+
+  /* ── CARD ─────────────────────────────────────────── */
+  .card {
+    background: var(--white); border: 1px solid var(--border);
+    border-radius: 10px; padding: 18px 20px;
+    display: flex; flex-direction: column;
+    transition: box-shadow 0.2s, border-color 0.2s;
+    text-decoration: none; color: inherit;
+  }
+  .card:hover { box-shadow: 0 4px 16px rgba(0,0,0,0.09); border-color: var(--teal); }
+  .card.highlighted { border-color: var(--pink); background: var(--pink-lt); }
+  .card.teal-card { border-color: var(--teal); background: var(--teal-lt); }
+  .card-cat {
+    font-size: 10px; font-weight: 700; color: var(--teal);
+    text-transform: uppercase; letter-spacing: 1px;
+    margin-bottom: 6px; display: flex; align-items: center; gap: 6px;
+  }
+  .card.highlighted .card-cat { color: var(--pink); }
+  .card-title { font-size: 14px; font-weight: 700; color: var(--navy); margin-bottom: 6px; }
+  .card-desc { font-size: 13px; color: var(--subtext); flex: 1; line-height: 1.5; margin-bottom: 12px; }
+  .card-go {
+    font-size: 13px; font-weight: 700; color: var(--pink);
+    text-decoration: none; display: inline-flex; align-items: center; gap: 4px;
+  }
+  .card-go:hover { color: var(--teal); }
+
+  /* ── PHASE BANNER ────────────────────────────────── */
+  .phase-banner {
+    display: flex; align-items: center; gap: 16px;
+    background: var(--white); border: 1px solid var(--border);
+    border-left: 4px solid var(--teal);
+    border-radius: 8px; padding: 16px 20px;
+    margin-bottom: 16px;
+  }
+  .phase-banner.pink-left { border-left-color: var(--pink); }
+  .phase-num {
+    width: 40px; height: 40px; border-radius: 50%;
+    background: var(--teal); color: white;
+    display: flex; align-items: center; justify-content: center;
+    font-size: 18px; font-weight: 900; flex-shrink: 0;
+  }
+  .phase-banner.pink-left .phase-num { background: var(--pink); }
+  .phase-info h3 { font-size: 16px; font-weight: 700; color: var(--navy); }
+  .phase-info p { font-size: 12px; color: var(--subtext); margin-top: 2px; }
+
+  /* ── STEP CARD ───────────────────────────────────── */
+  .step-card {
+    background: var(--white); border: 1px solid var(--border);
+    border-radius: 8px; padding: 16px 20px; margin-bottom: 12px;
+  }
+  .step-card h4 {
+    font-size: 14px; font-weight: 700; color: var(--navy);
+    margin-bottom: 8px; display: flex; align-items: center; gap: 8px;
+  }
+  .step-card p { font-size: 13px; color: var(--subtext); line-height: 1.5; margin-bottom: 10px; }
+  .step-card ul { list-style: none; margin: 0; padding: 0; }
+  .step-card ul li { padding: 4px 0; font-size: 13px; border-bottom: 1px solid var(--border); }
+  .step-card ul li:last-child { border-bottom: none; }
+  .step-card ul li::before { content: "🔗  "; font-size: 12px; }
+  .step-card a { color: var(--pink); font-weight: 600; text-decoration: none; }
+  .step-card a:hover { color: var(--teal); text-decoration: underline; }
+
+  /* ── CALLOUT ─────────────────────────────────────── */
+  .callout {
+    border-radius: 8px; overflow: hidden;
+    border: 1px solid var(--border); margin: 16px 0;
+  }
+  .callout-head {
+    padding: 10px 16px; font-size: 13px; font-weight: 700;
+    display: flex; align-items: center; gap: 8px;
+  }
+  .callout-body { padding: 12px 16px; }
+  .callout-body li {
+    padding: 5px 0; font-size: 13px; color: var(--subtext);
+    border-bottom: 1px solid rgba(0,0,0,0.05); list-style: none;
+  }
+  .callout-body li:last-child { border-bottom: none; }
+  .callout-body li::before { content: "✓  "; font-weight: 700; }
+  .callout-body a { color: var(--pink); font-weight: 600; text-decoration: none; }
+  .callout-body a:hover { text-decoration: underline; }
+
+  /* ── TABLE ───────────────────────────────────────── */
+  .data-table { width: 100%; border-collapse: collapse; border-radius: 8px; overflow: hidden; border: 1px solid var(--border); }
+  .data-table th { background: var(--navy); color: white; padding: 10px 14px; font-size: 12px; font-weight: 700; text-align: left; text-transform: uppercase; letter-spacing: 0.5px; }
+  .data-table td { padding: 10px 14px; font-size: 13px; border-bottom: 1px solid var(--border); vertical-align: top; }
+  .data-table tr:last-child td { border-bottom: none; }
+  .data-table tr:hover td { background: var(--bg); }
+  .data-table a { color: var(--pink); font-weight: 600; text-decoration: none; }
+  .data-table a:hover { text-decoration: underline; }
+  .data-table .teal-badge {
+    display: inline-block; background: var(--teal-lt);
+    color: var(--teal-dark); font-size: 11px; font-weight: 700;
+    padding: 2px 8px; border-radius: 20px; white-space: nowrap;
+  }
+  .data-table .pink-badge {
+    display: inline-block; background: var(--pink-lt);
+    color: var(--pink); font-size: 11px; font-weight: 700;
+    padding: 2px 8px; border-radius: 20px; white-space: nowrap;
+  }
+  .data-table .green-badge {
+    display: inline-block; background: #E6F4EA;
+    color: #1A7A4A; font-size: 12px; font-weight: 700;
+    padding: 2px 8px; border-radius: 20px; white-space: nowrap;
+  }
+
+  /* ── TIMELINE TABLE ──────────────────────────────── */
+  .timeline { width: 100%; border-collapse: collapse; border-radius: 8px; overflow: hidden; border: 1px solid var(--border); margin: 14px 0; }
+  .timeline th { padding: 10px 14px; font-size: 12px; font-weight: 700; color: white; text-align: left; text-transform: uppercase; letter-spacing: 0.5px; }
+  .timeline td { padding: 10px 14px; font-size: 13px; border-bottom: 1px solid var(--border); vertical-align: top; }
+  .timeline tr:last-child td { border-bottom: none; }
+  .timeline tr:hover td { background: var(--bg); }
+  .timeline .t-num { text-align: center; font-weight: 900; font-size: 15px; color: white; padding: 10px 6px; }
+  .timeline .t-phase { font-weight: 700; color: var(--navy); font-size: 13px; }
+  .timeline .t-time { color: var(--subtext); font-size: 11px; font-style: italic; margin-top: 2px; }
+
+  /* ── WHY GRID ────────────────────────────────────── */
+  .why-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 14px; }
+  .why-card {
+    background: var(--white); border: 1px solid var(--border);
+    border-radius: 8px; padding: 16px 18px;
+    border-top: 3px solid var(--teal);
+  }
+  .why-card h3 { font-size: 14px; font-weight: 700; color: var(--navy); margin-bottom: 6px; }
+  .why-card p { font-size: 13px; color: var(--subtext); line-height: 1.5; }
+
+  /* ── PLATFORM GRID ───────────────────────────────── */
+  .platform-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 12px; margin: 14px 0; }
+  .platform-card {
+    background: var(--white); border: 1px solid var(--border);
+    border-radius: 8px; padding: 14px 16px;
+    transition: box-shadow 0.2s, border-color 0.2s;
+  }
+  .platform-card:hover { box-shadow: 0 3px 12px rgba(0,0,0,0.08); border-color: var(--teal); }
+  .platform-card h4 { font-size: 13px; font-weight: 700; color: var(--navy); margin-bottom: 5px; }
+  .platform-card p { font-size: 12px; color: var(--subtext); line-height: 1.4; margin-bottom: 10px; }
+  .platform-card a { color: var(--pink); font-weight: 700; font-size: 12px; text-decoration: none; }
+  .platform-card a:hover { text-decoration: underline; }
+
+  /* ── SALARY TABLE ────────────────────────────────── */
+  .salary-table { width: 100%; border-collapse: collapse; border-radius: 8px; overflow: hidden; border: 1px solid var(--border); }
+  .salary-table th { background: var(--navy); color: white; padding: 10px 14px; font-size: 12px; font-weight: 700; text-transform: uppercase; letter-spacing: 0.5px; }
+  .salary-table td { padding: 10px 14px; font-size: 13px; border-bottom: 1px solid var(--border); }
+  .salary-table tr:last-child td { border-bottom: none; }
+  .salary-table tr:hover td { background: var(--bg); }
+  .salary-table .role { font-weight: 700; color: var(--navy); }
+  .salary-table .usd { font-weight: 700; color: #1A7A4A; text-align: center; }
+  .salary-table .php { font-weight: 700; color: var(--teal-dark); text-align: center; background: var(--teal-lt); }
+
+  /* ── TOOL TABLE ──────────────────────────────────── */
+  .tool-table { width: 100%; border-collapse: collapse; border-radius: 8px; overflow: hidden; border: 1px solid var(--border); margin-bottom: 20px; }
+  .tool-table th { padding: 9px 14px; font-size: 11px; font-weight: 700; text-transform: uppercase; letter-spacing: 0.5px; text-align: left; }
+  .tool-table td { padding: 9px 14px; font-size: 13px; border-bottom: 1px solid var(--border); vertical-align: middle; }
+  .tool-table tr:last-child td { border-bottom: none; }
+  .tool-table tr:hover td { background: var(--bg); }
+  .tool-table .tool-name { font-weight: 700; color: var(--navy); }
+  .tool-table a { color: var(--pink); font-weight: 600; text-decoration: none; font-size: 12px; }
+  .tool-table a:hover { text-decoration: underline; }
+
+  /* ── INFO BOX ────────────────────────────────────── */
+  .info-box {
+    background: var(--teal-lt); border: 1px solid var(--teal);
+    border-radius: 8px; padding: 14px 18px; margin: 16px 0;
+    font-size: 13px; color: var(--teal-dark); line-height: 1.5;
+  }
+  .info-box strong { color: var(--teal-dark); }
+  .pink-box {
+    background: var(--pink-lt); border: 1px solid var(--pink);
+    border-radius: 8px; padding: 14px 18px; margin: 16px 0;
+    font-size: 13px; color: #8B004E; line-height: 1.5;
+  }
+  .pink-box strong { color: var(--pink); }
+
+  /* ── LINK LIST ───────────────────────────────────── */
+  .link-list { list-style: none; margin: 10px 0; }
+  .link-list li { padding: 5px 0; font-size: 13px; border-bottom: 1px solid var(--border); }
+  .link-list li:last-child { border-bottom: none; }
+  .link-list li::before { content: "🔗  "; }
+  .link-list a { color: var(--pink); font-weight: 600; text-decoration: none; }
+  .link-list a:hover { text-decoration: underline; }
+
+  /* ── MOTIVATIONAL FOOTER ─────────────────────────── */
+  .moti-footer {
+    background: var(--navy); color: white;
+    border-radius: 10px; padding: 32px 36px;
+    text-align: center; margin-top: 40px;
+  }
+  .moti-footer h2 { font-size: 22px; color: #FFD700; margin-bottom: 8px; }
+  .moti-footer p { font-size: 14px; color: #aaa; margin-bottom: 4px; }
+  .moti-footer .cheer { font-size: 18px; color: var(--pink); font-weight: 700; margin-top: 14px; }
+
+  /* ── FOOTER ──────────────────────────────────────── */
+  footer {
+    background: var(--white); border-top: 1px solid var(--border);
+    padding: 16px 36px; font-size: 12px; color: var(--subtext);
+    margin-left: var(--sidebar-w);
+  }
+
+  /* ── TABLE WRAPPER (mobile scroll) ──────────────── */
+  .table-wrap { overflow-x: auto; -webkit-overflow-scrolling: touch; margin-bottom: 16px; }
+  .table-wrap table { min-width: 520px; }
+
+  /* ── HAMBURGER BUTTON ────────────────────────────── */
+  .ham-btn {
+    display: none; background: none; border: none; cursor: pointer;
+    padding: 4px 8px; margin-left: 12px; flex-direction: column;
+    gap: 5px; align-items: center; justify-content: center;
+  }
+  .ham-btn span {
+    display: block; width: 22px; height: 2px;
+    background: var(--navy); border-radius: 2px;
+    transition: transform 0.2s, opacity 0.2s;
+  }
+
+  /* ── SIDEBAR OVERLAY ─────────────────────────────── */
+  .sidebar-overlay {
+    display: none; position: fixed; inset: 0;
+    background: rgba(0,0,0,0.35); z-index: 150;
+  }
+  .sidebar-overlay.open { display: block; }
+
+  @media (max-width: 768px) {
+    .layout { flex-direction: column; }
+    .sidebar {
+      position: fixed; top: 0; left: -260px; width: 240px;
+      height: 100vh; z-index: 300; padding-top: 60px;
+      transition: left 0.25s ease; box-shadow: none;
+    }
+    .sidebar.open { left: 0; box-shadow: 4px 0 20px rgba(0,0,0,0.15); }
+    .top-bar { padding: 0 16px; }
+    .top-bar-title { display: none; }
+    .ham-btn { display: flex; }
+    .main { padding: 20px 16px; max-width: 100%; }
+    .card-grid { grid-template-columns: 1fr; }
+    .card-grid-2 { grid-template-columns: 1fr; }
+    .why-grid { grid-template-columns: 1fr; }
+    .platform-grid { grid-template-columns: 1fr; }
+    .phase-banner { flex-wrap: wrap; gap: 10px; }
+    .moti-footer { padding: 24px 18px; }
+    .moti-footer h2 { font-size: 18px; }
+    footer { margin-left: 0; padding: 14px 16px; }
+    .info-box, .pink-box { font-size: 12px; }
+  }
+
+  @media (max-width: 480px) {
+    .page-header h1 { font-size: 20px; }
+    .main { padding: 16px 12px; }
+    .card { padding: 14px 14px; }
+    .step-card { padding: 14px 14px; }
+    .phase-banner { padding: 12px 14px; }
+    .moti-footer { padding: 20px 14px; }
+    .moti-footer h2 { font-size: 16px; }
+    .top-bar { padding: 0 12px; }
+  }
+
+  /* ── MOBILE LINK ENHANCEMENTS ──────────────────── */
+  a { -webkit-tap-highlight-color: rgba(0,131,143,0.15); touch-action: manipulation; }
+  .card-go { cursor: pointer; }
+  .sidebar-link { cursor: pointer; }
+
+  @media (max-width: 768px) {
+    /* Ensure table links are easy to tap */
+    .tool-table a, .data-table a, .salary-table a, .timeline a {
+      display: inline-block; padding: 4px 2px; min-height: 28px; line-height: 1.6;
+    }
+    /* Card links full-width tap area */
+    .card { cursor: pointer; }
+    /* Sidebar links bigger tap area */
+    .sidebar-link { padding: 12px 20px; }
+    /* Step card links */
+    .step-card a { display: inline-block; padding: 3px 0; }
+    /* Callout links */
+    .callout-body a { padding: 2px 0; display: inline-block; }
+    /* Link list items */
+    .link-list li { padding: 8px 0; }
+    .link-list a { display: block; padding: 2px 0; }
+  }
+
+</style>
+</head>
+<body>
+
+<!-- TOP HEADER -->
+<div class="top-bar">
+  <div class="top-bar-title">US Bookkeeper Roadmap — Philippines Edition</div>
+  <div style="font-size:12px;color:var(--pink);font-weight:700;letter-spacing:0.3px;margin-left:auto;">Presented by Mary Grace ✨</div>
+  <button class="ham-btn" onclick="toggleSidebar()" aria-label="Open menu">
+    <span></span><span></span><span></span>
+  </button>
+</div>
+<div class="sidebar-overlay" id="sidebar-overlay" onclick="closeSidebar()"></div>
+
+<div class="layout">
+
+  <!-- SIDEBAR -->
+  <nav class="sidebar" id="sidebar">
+    <div class="sidebar-section">
+      <div class="sidebar-section-label">Overview</div>
+      <a class="sidebar-link active" href="#overview" onclick="setActive(this)">
+        <span class="s-icon">📋</span> Directory
+      </a>
+      <a class="sidebar-link" href="#why" onclick="setActive(this)">
+        <span class="s-icon">🇵🇭</span> Why Filipinos Win
+      </a>
+    </div>
+    <div class="sidebar-divider"></div>
+    <div class="sidebar-section">
+      <div class="sidebar-section-label">The Roadmap</div>
+      <a class="sidebar-link" href="#phase0" onclick="setActive(this)">
+        <span class="s-icon">🌱</span> Phase 0 — Foundation
+      </a>
+      <a class="sidebar-link" href="#phase1" onclick="setActive(this)">
+        <span class="s-icon">🛠</span> Phase 1 — US Toolkit
+      </a>
+      <a class="sidebar-link" href="#phase2" onclick="setActive(this)">
+        <span class="s-icon">📜</span> Phase 2 — Certifications
+      </a>
+      <a class="sidebar-link" href="#phase3" onclick="setActive(this)">
+        <span class="s-icon">💼</span> Phase 3 — Get Hired
+      </a>
+    </div>
+    <div class="sidebar-divider"></div>
+    <div class="sidebar-section">
+      <div class="sidebar-section-label">Resources</div>
+      <a class="sidebar-link" href="#tools" onclick="setActive(this)">
+        <span class="s-icon">💻</span> Tech Stack
+      </a>
+      <a class="sidebar-link" href="#videos" onclick="setActive(this)">
+        <span class="s-icon">🎬</span> Video Resources
+      </a>
+      <a class="sidebar-link" href="#timeline" onclick="setActive(this)">
+        <span class="s-icon">📅</span> Timelines
+      </a>
+      <a class="sidebar-link" href="#salary" onclick="setActive(this)">
+        <span class="s-icon">💰</span> Salary Guide
+      </a>
+      <a class="sidebar-link" href="#community" onclick="setActive(this)">
+        <span class="s-icon">🌐</span> Community
+      </a>
+    </div>
+    <div class="sidebar-divider"></div>
+    <div class="sidebar-section">
+      <a class="sidebar-link" href="#start" onclick="setActive(this)">
+        <span class="s-icon">🚀</span> Start Now
+      </a>
+    </div>
+  </nav>
+
+  <!-- MAIN CONTENT -->
+  <main class="main">
+
+    <!-- ═══════════ DIRECTORY / OVERVIEW ═══════════ -->
+    <div id="overview" class="section">
+      <div class="page-header">
+        <h1>📋 Resource Directory</h1>
+        <div class="underline"></div>
+        <div class="subtitle">Your complete roadmap to becoming a US bookkeeper or accountant — click any section to jump straight to it.</div>
+      </div>
+
+      <div class="card-grid">
+        <a class="card" href="#phase0">
+          <div class="card-cat">🌱 Phase 0</div>
+          <div class="card-title">Foundation Bootcamp</div>
+          <div class="card-desc">Accounting basics, US GAAP, Excel — start here if you're new</div>
+          <span class="card-go">Go →</span>
+        </a>
+        <a class="card" href="#phase1">
+          <div class="card-cat">🛠 Phase 1</div>
+          <div class="card-title">US Bookkeeping Toolkit</div>
+          <div class="card-desc">QuickBooks Online, Xero, payroll, sales tax</div>
+          <span class="card-go">Go →</span>
+        </a>
+        <a class="card highlighted" href="#phase2">
+          <div class="card-cat">📜 Phase 2</div>
+          <div class="card-title">US Certifications</div>
+          <div class="card-desc">QuickBooks ProAdvisor &amp; Xero Advisor — free certifications US clients recognize</div>
+          <span class="card-go">Go →</span>
+        </a>
+        <a class="card" href="#phase3">
+          <div class="card-cat">💼 Phase 3</div>
+          <div class="card-title">Get Hired</div>
+          <div class="card-desc">Freelancing, remote jobs, Upwork, OnlineJobs.ph &amp; more</div>
+          <span class="card-go">Go →</span>
+        </a>
+        <a class="card" href="#tools">
+          <div class="card-cat">💻 Tech Stack</div>
+          <div class="card-title">Essential Tools</div>
+          <div class="card-desc">QBO, Xero, Gusto, Slack, Microsoft 365, and more</div>
+          <span class="card-go">Go →</span>
+        </a>
+        <a class="card" href="#videos">
+          <div class="card-cat">🎬 Video Resources</div>
+          <div class="card-title">Learn the Software</div>
+          <div class="card-desc">Free YouTube tutorials &amp; courses for QBO, Xero, Gusto &amp; more</div>
+          <span class="card-go">Go →</span>
+        </a>
+        <a class="card" href="#salary">
+          <div class="card-cat">💰 Salary Guide</div>
+          <div class="card-title">How Much You Can Earn</div>
+          <div class="card-desc">USD rates and PHP equivalents by level — 2026 market data</div>
+          <span class="card-go">Go →</span>
+        </a>
+        <a class="card" href="#timeline">
+          <div class="card-cat">📅 Timeline</div>
+          <div class="card-title">Your Personal Timeline</div>
+          <div class="card-desc">Phase-by-phase schedule for fresh grads and accounting grads</div>
+          <span class="card-go">Go →</span>
+        </a>
+        <a class="card" href="#why">
+          <div class="card-cat">🇵🇭 Advantage</div>
+          <div class="card-title">Why Filipinos Win</div>
+          <div class="card-desc">English proficiency, education, timezone &amp; cost advantage</div>
+          <span class="card-go">Go →</span>
+        </a>
+        <a class="card" href="#start">
+          <div class="card-cat">🚀 Action Plan</div>
+          <div class="card-title">Start in 30 Days</div>
+          <div class="card-desc">Personalized first steps based on your current level</div>
+          <span class="card-go">Go →</span>
+        </a>
+      </div>
+    </div>
+
+    <!-- ═══════════ WHY FILIPINOS WIN ═══════════ -->
+    <div id="why" class="section">
+      <div class="section-title">🇵🇭 Why Filipinos Are Winning at US Accounting</div>
+      <div class="why-grid">
+        <div class="why-card">
+          <h3>🗣 English Proficiency</h3>
+          <p>One of the world's largest English-speaking nations. US clients communicate effortlessly with you — no language barrier, no awkward calls.</p>
+        </div>
+        <div class="why-card">
+          <h3>📚 Strong Accounting Education</h3>
+          <p>Philippine BSA programs are rigorous. Your foundation in financial statements, auditing, and taxation translates directly to US work.</p>
+        </div>
+        <div class="why-card">
+          <h3>🕐 Timezone That Works</h3>
+          <p>PHT overlaps with US evening hours, making real-time collaboration with US clients surprisingly easy — no need to work crazy hours.</p>
+        </div>
+        <div class="why-card">
+          <h3>💵 Earn USD, Live in PHP</h3>
+          <p>USD income goes far in the Philippines. You earn in the world's reserve currency while enjoying a lower cost of living.</p>
+        </div>
+      </div>
+
+      <div style="margin-top:20px;">
+        <div class="section-title">⚖️ Philippines vs. US Accounting — Quick Comparison</div>
+        <div class="table-wrap"><table class="data-table">
+          <thead><tr>
+            <th>Area</th>
+            <th>🇵🇭 Philippines</th>
+            <th>🇺🇸 United States</th>
+          </tr></thead>
+          <tbody>
+            <tr><td><strong>Accounting Standard</strong></td><td>PFRS (aligned with IFRS)</td><td>US GAAP</td></tr>
+            <tr><td><strong>Tax Authority</strong></td><td>BIR</td><td>IRS</td></tr>
+            <tr><td><strong>Professional License</strong></td><td>CPA via PRC Board Exam</td><td>CPA via AICPA/NASBA Uniform Exam</td></tr>
+            <tr><td><strong>Bookkeeper Cert</strong></td><td>Not formally regulated</td><td>QuickBooks ProAdvisor, Xero Advisor</td></tr>
+            <tr><td><strong>Tax Year</strong></td><td>January to December</td><td>Jan–Dec (fiscal years also allowed)</td></tr>
+            <tr><td><strong>Currency</strong></td><td>Philippine Peso (PHP)</td><td>US Dollar (USD)</td></tr>
+          </tbody>
+        </table></div>
+      </div>
+    </div>
+
+    <!-- ═══════════ PHASE 0 ═══════════ -->
+    <div id="phase0" class="section">
+      <div class="section-title">🌱 Phase 0 — Foundation Bootcamp</div>
+      <div class="phase-banner">
+        <div class="phase-num">0</div>
+        <div class="phase-info">
+          <h3>Foundation Bootcamp</h3>
+          <p>For: Fresh Graduates &amp; Career Changers &nbsp;|&nbsp; Duration: 1–2 months</p>
+        </div>
+      </div>
+
+      <div class="step-card">
+        <h4>📖 Step 1: Learn Accounting Basics</h4>
+        <p>No accounting background? No problem. Start here with free courses:</p>
+        <ul>
+          <li><a href="https://www.khanacademy.org/economics-finance-domain/core-finance/accounting-and-financial-statements" target="_blank">Khan Academy: Accounting &amp; Financial Statements (100% Free)</a></li>
+          <li><a href="https://www.coursera.org/learn/wharton-accounting" target="_blank">Coursera: Wharton Introduction to Financial Accounting (Free to Audit)</a></li>
+          <li><a href="https://www.accountingcoach.com/accounting-basics/explanation" target="_blank">AccountingCoach: Free Accounting Basics with Quizzes</a></li>
+        </ul>
+      </div>
+
+      <div class="step-card">
+        <h4>📊 Step 2: Excel &amp; Google Sheets Proficiency</h4>
+        <ul>
+          <li><a href="https://support.microsoft.com/en-us/office/excel-video-training-9bc05390-e94c-46af-a5b3-d7c22f6990bb" target="_blank">Microsoft Excel Free Training (Microsoft Learn)</a></li>
+          <li><a href="https://workspace.google.com/intl/en/learning-center/products/sheets/get-started/" target="_blank">Google Sheets Training Center (Free)</a></li>
+        </ul>
+      </div>
+
+      <div class="callout" style="border-color:var(--teal);">
+        <div class="callout-head" style="background:var(--teal-lt); color:var(--teal-dark);">✅ Phase 0 — Done When You Can...</div>
+        <ul class="callout-body">
+          <li>Explain debits, credits, and double-entry accounting without Googling it</li>
+          <li>Read a Balance Sheet, Income Statement, and Cash Flow Statement</li>
+          <li>Build a basic spreadsheet with VLOOKUP, IF formulas, and a pivot table</li>
+          <li>Tell the difference between cash and accrual accounting</li>
+        </ul>
+      </div>
+    </div>
+
+    <!-- ═══════════ PHASE 1 ═══════════ -->
+    <div id="phase1" class="section">
+      <div class="section-title">🛠 Phase 1 — Master the US Bookkeeping Toolkit</div>
+      <div class="phase-banner">
+        <div class="phase-num">1</div>
+        <div class="phase-info">
+          <h3>Master the US Bookkeeping Toolkit</h3>
+          <p>For: Everyone &nbsp;|&nbsp; Duration: 2–4 months</p>
+        </div>
+      </div>
+
+      <div class="step-card">
+        <h4>⭐ Step 3: QuickBooks Online (QBO) — Your #1 Priority</h4>
+        <p>QuickBooks Online is used by the majority of US small businesses. The ProAdvisor certification is <strong>completely FREE</strong> and lists you in QBO's directory where US clients search for bookkeepers.</p>
+        <ul>
+          <li><a href="https://quickbooks.intuit.com/accountants/training-certification/" target="_blank">QuickBooks Online ProAdvisor Certification (Free — Get Listed!)</a></li>
+          <li><a href="https://www.linkedin.com/learning/topics/quickbooks" target="_blank">QuickBooks Online on LinkedIn Learning</a></li>
+        </ul>
+      </div>
+
+      <div class="step-card">
+        <h4>Step 4: Xero — Double Your Client Pool</h4>
+        <ul>
+          <li><a href="https://www.xero.com/us/partner-program/xero-advisor-certification/" target="_blank">Xero Advisor Certification (Free)</a></li>
+          <li><a href="https://central.xero.com/s/learning" target="_blank">Xero Central Learning Hub (Free Courses + Webinars)</a></li>
+        </ul>
+      </div>
+
+      <div class="step-card">
+        <h4>Step 5: US Payroll Basics</h4>
+        <ul>
+          <li><a href="https://www.irs.gov/businesses/small-businesses-self-employed/payroll-taxes" target="_blank">IRS Payroll Tax Guide</a></li>
+          <li><a href="https://gusto.com/accountants" target="_blank">Gusto Payroll Training for Accounting Partners (Free)</a></li>
+        </ul>
+      </div>
+
+      <div class="step-card">
+        <h4>Step 6: US Sales Tax</h4>
+        <ul>
+          <li><a href="https://www.taxjar.com/sales-tax-101/" target="_blank">TaxJar Sales Tax University (Free Courses)</a></li>
+          <li><a href="https://www.avalara.com/us/en/learn/sales-tax.html" target="_blank">Avalara Sales Tax Learning Center (Free)</a></li>
+        </ul>
+      </div>
+    </div>
+
+    <!-- ═══════════ PHASE 2 ═══════════ -->
+    <div id="phase2" class="section">
+      <div class="section-title">📜 Phase 2 — Get Your US Bookkeeping Certification</div>
+      <div class="phase-banner pink-left">
+        <div class="phase-num">2</div>
+        <div class="phase-info">
+          <h3>Get Your Official US Bookkeeping Certification</h3>
+          <p>For: Everyone &nbsp;|&nbsp; Duration: 1–3 months &nbsp;|&nbsp; 100% Free</p>
+        </div>
+      </div>
+
+      <div class="card-grid card-grid-2" style="margin-bottom:16px;">
+        <div class="card teal-card">
+          <div class="card-cat">⭐ QuickBooks Online</div>
+          <div class="card-title">QBO ProAdvisor Certification</div>
+          <div class="card-desc">The most in-demand bookkeeping certification in the US. Completely free — study at your own pace, take the exam online, and get listed in the QBO ProAdvisor directory where US clients search for bookkeepers.</div>
+          <div style="display:flex;gap:8px;flex-wrap:wrap;margin-bottom:12px;">
+            <span class="teal-badge">100% Free</span>
+            <span class="teal-badge">Self-paced</span>
+            <span class="teal-badge">Listed in QBO Directory</span>
+          </div>
+          <a class="card-go" href="https://quickbooks.intuit.com/accountants/training-certification/" target="_blank">Get Certified Free →</a>
+        </div>
+        <div class="card highlighted">
+          <div class="card-cat">🟦 Xero</div>
+          <div class="card-title">Xero Advisor Certification</div>
+          <div class="card-desc">Free certification from Xero that makes you a listed Advisor in their directory. Many US CPA firms and growing businesses prefer Xero — pairing this with QBO doubles your client opportunities.</div>
+          <div style="display:flex;gap:8px;flex-wrap:wrap;margin-bottom:12px;">
+            <span class="teal-badge">100% Free</span>
+            <span class="teal-badge">Self-paced</span>
+            <span class="teal-badge">Listed in Xero Directory</span>
+          </div>
+          <a class="card-go" href="https://www.xero.com/us/partner-program/xero-advisor-certification/" target="_blank">Get Certified Free →</a>
+        </div>
+      </div>
+
+      <div class="step-card">
+        <h4>📚 How to Study for Both</h4>
+        <p>Both certifications have free official study materials. Here's the fastest path:</p>
+        <ul>
+          <li><a href="https://quickbooks.intuit.com/accountants/training-certification/" target="_blank">QBO ProAdvisor Training Portal — official free course + exam (Intuit)</a></li>
+          <li><a href="https://central.xero.com/s/learning" target="_blank">Xero Central Learning Hub — free self-paced courses and webinars</a></li>
+          <li><a href="https://www.youtube.com/@HectorGarciaCPA" target="_blank">Hector Garcia CPA on YouTube — best free QBO deep-dive tutorials</a></li>
+          <li><a href="https://www.youtube.com/@xero" target="_blank">Xero Official YouTube — step-by-step how-to videos</a></li>
+        </ul>
+      </div>
+
+      <div class="callout" style="border-color:var(--pink);">
+        <div class="callout-head" style="background:var(--pink-lt); color:var(--pink);">🎉 Go Get It Guys!</div>
+        <ul class="callout-body">
+          <li>You have everything you need — the knowledge, the tools, and the opportunity is right there</li>
+          <li>Every US bookkeeper started exactly where you are right now</li>
+          <li>Take it one certification at a time, one client at a time — watch it snowball</li>
+          <li>The demand for Filipino bookkeepers is real, growing, and not slowing down</li>
+        </ul>
+      </div>
+    </div>
+
+    <!-- ═══════════ PHASE 3 ═══════════ -->
+    <div id="phase3" class="section">
+      <div class="section-title">💼 Phase 3 — Land Your First US Opportunity</div>
+      <div class="phase-banner">
+        <div class="phase-num">3</div>
+        <div class="phase-info">
+          <h3>Land Your First Paying US Opportunity</h3>
+          <p>For: Everyone &nbsp;|&nbsp; Duration: 1–3 months of active applying</p>
+        </div>
+      </div>
+
+      <div class="section-title" style="margin-top:20px;">💻 Track A — Freelancing Platforms</div>
+      <div class="platform-grid">
+        <div class="platform-card">
+          <h4>Upwork</h4>
+          <p>Best freelance marketplace for US accounting work. Get your first 5 reviews and watch the leads come in.</p>
+          <a href="https://www.upwork.com" target="_blank">upwork.com →</a>
+        </div>
+        <div class="platform-card">
+          <h4>OnlineJobs.ph</h4>
+          <p>THE platform for Filipino VAs &amp; bookkeepers. US employers specifically come here to hire.</p>
+          <a href="https://www.onlinejobs.ph" target="_blank">onlinejobs.ph →</a>
+        </div>
+        <div class="platform-card">
+          <h4>QBO ProAdvisor Directory</h4>
+          <p>Get listed and US business owners will find YOU. Free passive marketing that actually works.</p>
+          <a href="https://quickbooks.intuit.com/find-an-accountant/" target="_blank">View Directory →</a>
+        </div>
+        <div class="platform-card">
+          <h4>Xero Advisor Directory</h4>
+          <p>Xero-using US clients actively search for advisors here. Free listing once you're certified.</p>
+          <a href="https://www.xero.com/us/advisors/" target="_blank">Xero Advisors →</a>
+        </div>
+        <div class="platform-card">
+          <h4>Fiverr</h4>
+          <p>Package your services as fixed-price gigs (e.g., "Monthly bookkeeping cleanup – $99").</p>
+          <a href="https://www.fiverr.com" target="_blank">fiverr.com →</a>
+        </div>
+        <div class="platform-card">
+          <h4>Facebook Groups</h4>
+          <p>Join US small business groups and offer free consultations to build your first testimonials.</p>
+          <a href="https://www.facebook.com/search/groups/?q=bookkeeping+accountant+philippines" target="_blank">Find Groups →</a>
+        </div>
+      </div>
+
+      <div class="section-title" style="margin-top:20px;">🏢 Track B — Full-Time Remote Employers</div>
+      <div class="table-wrap"><table class="data-table">
+        <thead><tr><th>Company</th><th>What They Do</th><th>Link</th></tr></thead>
+        <tbody>
+          <tr><td><strong>TOA Global</strong></td><td>Largest accounting outsourcing firm for AU/US clients — very PH-focused</td><td><a href="https://www.toaglobal.com/jobs" target="_blank">toaglobal.com/jobs →</a></td></tr>
+          <tr><td><strong>D&amp;V Philippines</strong></td><td>Dedicated offshore accounting firm for US/AU/UK clients</td><td><a href="https://www.dvphilippines.com/careers" target="_blank">dvphilippines.com →</a></td></tr>
+          <tr><td><strong>Booth &amp; Partners</strong></td><td>Premium outsourcing with US accounting roles</td><td><a href="https://www.boothandpartners.com/careers" target="_blank">boothandpartners.com →</a></td></tr>
+          <tr><td><strong>LinkedIn Jobs</strong></td><td>Search "Remote Bookkeeper Philippines" or "US GAAP Remote"</td><td><a href="https://www.linkedin.com/jobs/" target="_blank">linkedin.com/jobs →</a></td></tr>
+          <tr><td><strong>Remote.co</strong></td><td>Curated remote-only accounting jobs — quality over quantity</td><td><a href="https://remote.co/remote-jobs/accounting/" target="_blank">remote.co →</a></td></tr>
+          <tr><td><strong>We Work Remotely</strong></td><td>High-quality remote accounting and finance listings</td><td><a href="https://weworkremotely.com" target="_blank">weworkremotely.com →</a></td></tr>
+        </tbody>
+      </table></div>
+    </div>
+
+    <!-- ═══════════ TECH STACK ═══════════ -->
+    <div id="tools" class="section">
+      <div class="section-title">💻 Tech Stack — Essential US Accounting Tools</div>
+      <div class="info-box">US clients expect you to know these tools. List every certification and tool on your LinkedIn and Upwork profile — it makes a massive difference. <strong>✅ Create a free account in each tool below to practice before you get paid clients!</strong></div>
+
+      <div style="margin-bottom:6px;"><strong style="color:var(--teal);font-size:12px;text-transform:uppercase;letter-spacing:1px;">📒 Accounting &amp; Bookkeeping</strong></div>
+      <div class="table-wrap"><table class="tool-table">
+        <thead><tr><th style="background:var(--teal);color:white;">Tool</th><th style="background:var(--teal);color:white;">Why You Need It</th><th style="background:var(--teal);color:white;">Website</th><th style="background:var(--pink);color:white;">Create Account</th></tr></thead>
+        <tbody>
+          <tr><td class="tool-name">QuickBooks Online</td><td>THE must-have. Most US SMBs use it. Get certified for FREE.</td><td><a href="https://quickbooks.intuit.com" target="_blank">quickbooks.intuit.com →</a></td><td><a href="https://accounts.intuit.com/app/sign-in?app_group=QBO&asset_alias=Intuit.accounting.core.qbowebapp&redirect_url=https%3A%2F%2Fapp.qbo.intuit.com%2Fapp%2Fhomepage" target="_blank">Sign up FREE →</a></td></tr>
+          <tr><td class="tool-name">Xero</td><td>Growing fast in the US. Many CPA firms prefer it over QBO.</td><td><a href="https://www.xero.com/us" target="_blank">xero.com →</a></td><td><a href="https://www.xero.com/us/signup/" target="_blank">30-day free trial →</a></td></tr>
+          <tr><td class="tool-name">FreshBooks</td><td>Popular with freelancers and service businesses.</td><td><a href="https://www.freshbooks.com" target="_blank">freshbooks.com →</a></td><td><a href="https://www.freshbooks.com/signup" target="_blank">30-day free trial →</a></td></tr>
+          <tr><td class="tool-name">Wave Accounting</td><td>Free software used by very small US businesses.</td><td><a href="https://www.waveapps.com" target="_blank">waveapps.com →</a></td><td><a href="https://www.waveapps.com/accounting" target="_blank">Free forever →</a></td></tr>
+          <tr><td class="tool-name">Sage Intacct</td><td>Mid-market software needed for senior roles at larger firms.</td><td><a href="https://www.sage.com/en-us/products/intacct/" target="_blank">sage.com →</a></td><td><a href="https://www.sage.com/en-us/products/intacct/contact-us/" target="_blank">Request demo →</a></td></tr>
+        </tbody>
+      </table></div>
+
+      <div style="margin-bottom:6px;margin-top:20px;"><strong style="color:var(--teal);font-size:12px;text-transform:uppercase;letter-spacing:1px;">💰 Payroll</strong></div>
+      <div class="table-wrap"><table class="tool-table">
+        <thead><tr><th style="background:var(--teal);color:white;">Tool</th><th style="background:var(--teal);color:white;">Why You Need It</th><th style="background:var(--teal);color:white;">Website</th><th style="background:var(--pink);color:white;">Create Account</th></tr></thead>
+        <tbody>
+          <tr><td class="tool-name">Gusto</td><td>Most popular US payroll for small businesses. Get partner-certified FREE.</td><td><a href="https://gusto.com/accountants" target="_blank">gusto.com →</a></td><td><a href="https://gusto.com/accountants/signup" target="_blank">Free accountant account →</a></td></tr>
+          <tr><td class="tool-name">ADP</td><td>Enterprise payroll — required knowledge for larger employer clients.</td><td><a href="https://www.adp.com" target="_blank">adp.com →</a></td><td><a href="https://www.adp.com/contact.aspx" target="_blank">Request access →</a></td></tr>
+          <tr><td class="tool-name">Paychex</td><td>SMB payroll widely used across the US.</td><td><a href="https://www.paychex.com" target="_blank">paychex.com →</a></td><td><a href="https://www.paychex.com/accountants" target="_blank">Partner program →</a></td></tr>
+          <tr><td class="tool-name">QuickBooks Payroll</td><td>Integrated directly with QBO — learn this alongside QBO.</td><td><a href="https://quickbooks.intuit.com/payroll/" target="_blank">quickbooks.intuit.com/payroll →</a></td><td><a href="https://quickbooks.intuit.com/accountants/training-certification/" target="_blank">Sign up via QBO →</a></td></tr>
+        </tbody>
+      </table></div>
+
+      <div style="margin-bottom:6px;margin-top:20px;"><strong style="color:var(--teal);font-size:12px;text-transform:uppercase;letter-spacing:1px;">📑 Tax &amp; Compliance</strong></div>
+      <div class="table-wrap"><table class="tool-table">
+        <thead><tr><th style="background:var(--teal);color:white;">Tool</th><th style="background:var(--teal);color:white;">Why You Need It</th><th style="background:var(--teal);color:white;">Website</th><th style="background:var(--pink);color:white;">Create Account</th></tr></thead>
+        <tbody>
+          <tr><td class="tool-name">TaxJar</td><td>Sales tax automation — essential for e-commerce clients.</td><td><a href="https://www.taxjar.com/sales-tax-101/" target="_blank">taxjar.com →</a></td><td><a href="https://app.taxjar.com/sign_up" target="_blank">Free trial →</a></td></tr>
+          <tr><td class="tool-name">Drake Tax</td><td>Professional tax software used by CPA firms across the US.</td><td><a href="https://www.drakesoftware.com" target="_blank">drakesoftware.com →</a></td><td><a href="https://www.drakesoftware.com/drake-tax/free-trial/" target="_blank">Free trial →</a></td></tr>
+          <tr><td class="tool-name">ProConnect Tax</td><td>Intuit's professional-grade tax software for CPA firm use.</td><td><a href="https://proconnect.intuit.com" target="_blank">proconnect.intuit.com →</a></td><td><a href="https://proconnect.intuit.com/sign-up/" target="_blank">Sign up →</a></td></tr>
+          <tr><td class="tool-name">Avalara</td><td>Advanced sales tax compliance for multi-state clients.</td><td><a href="https://www.avalara.com/us/en/learn/sales-tax.html" target="_blank">avalara.com →</a></td><td><a href="https://www.avalara.com/us/en/get-started.html" target="_blank">Get started →</a></td></tr>
+        </tbody>
+      </table></div>
+
+      <div style="margin-bottom:6px;margin-top:20px;"><strong style="color:var(--teal);font-size:12px;text-transform:uppercase;letter-spacing:1px;">💬 Collaboration</strong></div>
+      <div class="table-wrap"><table class="tool-table">
+        <thead><tr><th style="background:var(--teal);color:white;">Tool</th><th style="background:var(--teal);color:white;">Why You Need It</th><th style="background:var(--teal);color:white;">Website</th><th style="background:var(--pink);color:white;">Create Account</th></tr></thead>
+        <tbody>
+          <tr><td class="tool-name">Slack</td><td>Primary team communication for US remote teams. Know it well.</td><td><a href="https://slack.com" target="_blank">slack.com →</a></td><td><a href="https://slack.com/get-started" target="_blank">Free account →</a></td></tr>
+          <tr><td class="tool-name">Zoom</td><td>Client video calls and virtual meetings. Non-negotiable.</td><td><a href="https://zoom.us" target="_blank">zoom.us →</a></td><td><a href="https://zoom.us/signup" target="_blank">Free account →</a></td></tr>
+          <tr><td class="tool-name">Google Workspace</td><td>Gmail, Docs, Sheets — universal in US small businesses.</td><td><a href="https://workspace.google.com" target="_blank">workspace.google.com →</a></td><td><a href="https://workspace.google.com/landing/partners/referral/googleworkspace.html" target="_blank">14-day free trial →</a></td></tr>
+          <tr><td class="tool-name">Microsoft 365</td><td>Excel, Word, Outlook — required for larger CPA firms.</td><td><a href="https://www.microsoft365.com" target="_blank">microsoft365.com →</a></td><td><a href="https://www.microsoft.com/en-us/microsoft-365/try" target="_blank">Free trial →</a></td></tr>
+          <tr><td class="tool-name">Notion / ClickUp</td><td>Project management tools used by remote-first teams.</td><td><a href="https://www.notion.so" target="_blank">notion.so →</a></td><td><a href="https://www.notion.so/signup" target="_blank">Free forever →</a></td></tr>
+        </tbody>
+      </table></div>
+    </div>
+
+    <!-- ═══════════ VIDEO RESOURCES ═══════════ -->
+    <div id="videos" class="section">
+      <div class="section-title">🎬 Video Resources — Learn the Software</div>
+      <div class="info-box">The fastest way to learn accounting software is by watching and doing. All channels below are free on YouTube unless noted otherwise. Bookmark these and come back to them often!</div>
+
+      <div style="margin-bottom:6px;"><strong style="color:var(--teal);font-size:12px;text-transform:uppercase;letter-spacing:1px;">📒 QuickBooks Online (QBO)</strong></div>
+      <div class="table-wrap"><table class="tool-table">
+        <thead><tr><th style="background:var(--teal);color:white;">Channel / Resource</th><th style="background:var(--teal);color:white;">What You'll Learn</th><th style="background:var(--teal);color:white;">Link</th></tr></thead>
+        <tbody>
+          <tr><td class="tool-name">QuickBooks Official YouTube</td><td>Tutorials straight from Intuit — setup, invoicing, reports, payroll</td><td><a href="https://www.youtube.com/@QuickBooks" target="_blank">YouTube →</a></td></tr>
+          <tr><td class="tool-name">Hector Garcia CPA</td><td>The #1 QBO YouTube teacher — deep dives into every feature, great for beginners to advanced</td><td><a href="https://www.youtube.com/@HectorGarciaCPA" target="_blank">YouTube →</a></td></tr>
+          <tr><td class="tool-name">QBO ProAdvisor Training (Free)</td><td>Official free certification course from Intuit — get listed in the QBO directory after passing</td><td><a href="https://quickbooks.intuit.com/accountants/training-certification/" target="_blank">intuit.com →</a></td></tr>
+          <tr><td class="tool-name">Fit Small Business — QBO</td><td>Step-by-step written + video walkthroughs for every major QBO task</td><td><a href="https://fitsmallbusiness.com/quickbooks-online-tutorials/" target="_blank">fitsmallbusiness.com →</a></td></tr>
+          <tr><td class="tool-name">LinkedIn Learning — QuickBooks</td><td>Structured video courses with certificates — great for your profile</td><td><a href="https://www.linkedin.com/learning/topics/quickbooks" target="_blank">LinkedIn Learning →</a></td></tr>
+        </tbody>
+      </table></div>
+
+      <div style="margin-bottom:6px;margin-top:20px;"><strong style="color:var(--teal);font-size:12px;text-transform:uppercase;letter-spacing:1px;">🟦 Xero</strong></div>
+      <div class="table-wrap"><table class="tool-table">
+        <thead><tr><th style="background:var(--teal);color:white;">Channel / Resource</th><th style="background:var(--teal);color:white;">What You'll Learn</th><th style="background:var(--teal);color:white;">Link</th></tr></thead>
+        <tbody>
+          <tr><td class="tool-name">Xero Official YouTube</td><td>Official how-to videos — bank reconciliation, invoicing, payroll, reporting</td><td><a href="https://www.youtube.com/@xero" target="_blank">YouTube →</a></td></tr>
+          <tr><td class="tool-name">Xero Central Learning Hub</td><td>Free self-paced courses + webinars, direct from Xero — includes certification prep</td><td><a href="https://central.xero.com/s/learning" target="_blank">central.xero.com →</a></td></tr>
+          <tr><td class="tool-name">Xero Advisor Certification (Free)</td><td>Official free course to get Xero-certified and listed in the Xero Advisor directory</td><td><a href="https://www.xero.com/us/partner-program/xero-advisor-certification/" target="_blank">xero.com →</a></td></tr>
+          <tr><td class="tool-name">Eduymer — Xero for Beginners</td><td>Filipino-friendly Xero tutorials — great starting point if you're brand new</td><td><a href="https://www.youtube.com/@eduymer" target="_blank">YouTube →</a></td></tr>
+        </tbody>
+      </table></div>
+
+      <div style="margin-bottom:6px;margin-top:20px;"><strong style="color:var(--teal);font-size:12px;text-transform:uppercase;letter-spacing:1px;">🌊 FreshBooks</strong></div>
+      <div class="table-wrap"><table class="tool-table">
+        <thead><tr><th style="background:var(--teal);color:white;">Channel / Resource</th><th style="background:var(--teal);color:white;">What You'll Learn</th><th style="background:var(--teal);color:white;">Link</th></tr></thead>
+        <tbody>
+          <tr><td class="tool-name">FreshBooks Official YouTube</td><td>Invoicing, time tracking, expense management — focused on freelancers &amp; service businesses</td><td><a href="https://www.youtube.com/@FreshBooks" target="_blank">YouTube →</a></td></tr>
+          <tr><td class="tool-name">FreshBooks Support &amp; Tutorials</td><td>Written guides + video walkthroughs for every FreshBooks feature</td><td><a href="https://www.freshbooks.com/support" target="_blank">freshbooks.com →</a></td></tr>
+        </tbody>
+      </table></div>
+
+      <div style="margin-bottom:6px;margin-top:20px;"><strong style="color:var(--teal);font-size:12px;text-transform:uppercase;letter-spacing:1px;">🌊 Wave Accounting</strong></div>
+      <div class="table-wrap"><table class="tool-table">
+        <thead><tr><th style="background:var(--teal);color:white;">Channel / Resource</th><th style="background:var(--teal);color:white;">What You'll Learn</th><th style="background:var(--teal);color:white;">Link</th></tr></thead>
+        <tbody>
+          <tr><td class="tool-name">Wave Financial YouTube</td><td>Free software overview — great for understanding what micro-business clients use</td><td><a href="https://www.youtube.com/@WaveFinancial" target="_blank">YouTube →</a></td></tr>
+          <tr><td class="tool-name">Wave Help Center</td><td>Step-by-step setup, invoicing, receipts, and bank connections</td><td><a href="https://support.waveapps.com" target="_blank">support.waveapps.com →</a></td></tr>
+        </tbody>
+      </table></div>
+
+      <div style="margin-bottom:6px;margin-top:20px;"><strong style="color:var(--teal);font-size:12px;text-transform:uppercase;letter-spacing:1px;">💰 Gusto (Payroll)</strong></div>
+      <div class="table-wrap"><table class="tool-table">
+        <thead><tr><th style="background:var(--teal);color:white;">Channel / Resource</th><th style="background:var(--teal);color:white;">What You'll Learn</th><th style="background:var(--teal);color:white;">Link</th></tr></thead>
+        <tbody>
+          <tr><td class="tool-name">Gusto Official YouTube</td><td>Payroll setup, benefits, contractor payments — covers the full product</td><td><a href="https://www.youtube.com/@gustohq" target="_blank">YouTube →</a></td></tr>
+          <tr><td class="tool-name">Gusto Pro Partner Certification</td><td>Free certification for accountants — get listed in Gusto's advisor directory</td><td><a href="https://gusto.com/accountants/certification" target="_blank">gusto.com →</a></td></tr>
+        </tbody>
+      </table></div>
+
+      <div style="margin-bottom:6px;margin-top:20px;"><strong style="color:var(--teal);font-size:12px;text-transform:uppercase;letter-spacing:1px;">🎓 General Bookkeeping &amp; Accounting (YouTube Must-Follows)</strong></div>
+      <div class="table-wrap"><table class="tool-table">
+        <thead><tr><th style="background:var(--teal);color:white;">Channel</th><th style="background:var(--teal);color:white;">Why Watch</th><th style="background:var(--teal);color:white;">Link</th></tr></thead>
+        <tbody>
+          <tr><td class="tool-name">Accounting Stuff (James Hearle)</td><td>Best channel for accounting fundamentals — debits, credits, financial statements made simple</td><td><a href="https://www.youtube.com/@AccountingStuff" target="_blank">YouTube →</a></td></tr>
+          <tr><td class="tool-name">Bookkeeper Launch</td><td>Focused on building a bookkeeping business — great for aspiring freelancers</td><td><a href="https://www.youtube.com/@BookkeeperLaunch" target="_blank">YouTube →</a></td></tr>
+          <tr><td class="tool-name">The Financial Controller</td><td>Real-world accounting tips from a finance leader — great for career growth content</td><td><a href="https://www.youtube.com/@TheFinancialController" target="_blank">YouTube →</a></td></tr>
+          <tr><td class="tool-name">Accounting Coach (Videos)</td><td>Short and clear concept videos to go with the free AccountingCoach.com text lessons</td><td><a href="https://www.accountingcoach.com/videos" target="_blank">accountingcoach.com →</a></td></tr>
+          <tr><td class="tool-name">Udemy — Bookkeeping Courses</td><td>Structured paid courses (frequently on sale for ~₱500) — great for certificates to show clients</td><td><a href="https://www.udemy.com/courses/search/?src=ukw&q=bookkeeping" target="_blank">udemy.com →</a></td></tr>
+        </tbody>
+      </table></div>
+    </div>
+
+    <!-- ═══════════ TIMELINES ═══════════ -->
+    <div id="timeline" class="section">
+      <div class="section-title">📅 Personalized Timelines</div>
+
+      <div style="margin-bottom:14px;font-weight:700;color:var(--navy);">🌱 Starting from Scratch (Fresh Graduate / Career Changer)</div>
+      <div class="table-wrap"><table class="timeline">
+        <thead><tr><th style="background:var(--teal);width:40px;">#</th><th style="background:var(--teal);width:160px;">Phase</th><th style="background:var(--teal);">What You'll Achieve</th></tr></thead>
+        <tbody>
+          <tr><td class="t-num" style="background:var(--teal);">1</td><td><div class="t-phase">Foundation</div><div class="t-time">Months 1–2</div></td><td>Complete Khan Academy + AccountingCoach basics. Master Excel. Understand US GAAP vs IFRS.</td></tr>
+          <tr><td class="t-num" style="background:#E6F4F5;color:var(--teal-dark);">2</td><td><div class="t-phase">Software</div><div class="t-time">Months 3–4</div></td><td>Earn QBO ProAdvisor + Xero Advisor certifications. Build a practice company in QBO.</td></tr>
+          <tr><td class="t-num" style="background:var(--teal);">3</td><td><div class="t-phase">Certification</div><div class="t-time">Months 5–7</div></td><td>Complete QBO ProAdvisor &amp; Xero Advisor certifications. Build first portfolio project (volunteer bookkeeping or practice set).</td></tr>
+          <tr><td class="t-num" style="background:#E6F4F5;color:var(--teal-dark);">4</td><td><div class="t-phase">First Client</div><div class="t-time">Months 8–10</div></td><td>Launch Upwork &amp; OnlineJobs.ph profiles. Land first 2 paid clients. Get your first reviews.</td></tr>
+          <tr><td class="t-num" style="background:var(--teal);">5</td><td><div class="t-phase">Growth</div><div class="t-time">Year 2+</div></td><td>Pursue Xero Advisor. Scale hourly rates from $10 to $20+. Build retainer client relationships.</td></tr>
+        </tbody>
+      </table></div>
+
+      <div style="margin-bottom:14px;margin-top:28px;font-weight:700;color:var(--navy);">🎓 Already Have an Accounting Degree</div>
+      <div class="table-wrap"><table class="timeline">
+        <thead><tr><th style="background:var(--navy);width:40px;">#</th><th style="background:var(--navy);width:160px;">Phase</th><th style="background:var(--navy);">What You'll Achieve</th></tr></thead>
+        <tbody>
+          <tr><td class="t-num" style="background:var(--navy);">1</td><td><div class="t-phase">US Software</div><div class="t-time">Months 1–2</div></td><td>Earn QBO ProAdvisor + Xero Advisor certifications. Review US GAAP differences from PFRS/IFRS.</td></tr>
+          <tr><td class="t-num" style="background:#EBEBEF;color:var(--navy);">2</td><td><div class="t-phase">Certification</div><div class="t-time">Months 3–5</div></td><td>Complete QBO ProAdvisor &amp; Xero Advisor certifications. Start applying to US remote roles.</td></tr>
+          <tr><td class="t-num" style="background:var(--navy);">3</td><td><div class="t-phase">Job Search</div><div class="t-time">Months 4–6</div></td><td>Apply to TOA Global, D&amp;V Philippines, Upwork, OnlineJobs.ph. Optimize LinkedIn for US roles.</td></tr>
+          <tr><td class="t-num" style="background:#EBEBEF;color:var(--navy);">4</td><td><div class="t-phase">Experience</div><div class="t-time">Year 1–2</div></td><td>Build 1–2 years of US GAAP experience. Scale your rates and specialisations.</td></tr>
+        </tbody>
+      </table></div>
+    </div>
+
+    <!-- ═══════════ SALARY ═══════════ -->
+    <div id="salary" class="section">
+      <div class="section-title">💰 Salary &amp; Rate Guide — 2026 Market Data</div>
+      <div class="info-box">Real rates for Filipino professionals working remotely for US clients. PHP equivalents based on ~USD/PHP 55 rate.</div>
+      <div class="table-wrap"><table class="salary-table">
+        <thead><tr>
+          <th>Level</th>
+          <th style="text-align:center;">Freelance (USD/hr)</th>
+          <th style="text-align:center;">Remote Job (USD/mo)</th>
+          <th style="text-align:center;">PHP/month</th>
+        </tr></thead>
+        <tbody>
+          <tr><td class="role">Entry Bookkeeper</td><td class="usd">$6–10/hr</td><td class="usd">$400–700</td><td class="php">PHP 22K–38K</td></tr>
+          <tr><td class="role">QBO/Xero Certified Bookkeeper</td><td class="usd">$10–18/hr</td><td class="usd">$700–1,200</td><td class="php">PHP 38K–66K</td></tr>
+          <tr><td class="role">QBO/Xero Certified</td><td class="usd">$15–25/hr</td><td class="usd">$1,000–1,800</td><td class="php">PHP 55K–99K</td></tr>
+          <tr><td class="role">Senior Bookkeeper / Controller</td><td class="usd">$25–40/hr</td><td class="usd">$1,500–2,500</td><td class="php">PHP 82K–137K</td></tr>
+        </tbody>
+      </table></div>
+    </div>
+
+    <!-- ═══════════ COMMUNITY ═══════════ -->
+    <div id="community" class="section">
+      <div class="section-title">🌐 Community &amp; Learning Resources</div>
+
+      <div class="card-grid">
+        <div class="card">
+          <div class="card-cat">📖 Learning</div>
+          <div class="card-title">Online Courses</div>
+          <div class="card-desc">Free and paid courses to build your US accounting skills.</div>
+          <ul class="link-list">
+            <li><a href="https://www.coursera.org/browse/business/accounting" target="_blank">Coursera — Accounting &amp; Finance</a></li>
+            <li><a href="https://www.linkedin.com/learning/topics/accounting" target="_blank">LinkedIn Learning — Accounting</a></li>
+            <li><a href="https://www.youtube.com/@accountingstuff" target="_blank">YouTube: Accounting Stuff</a></li>
+            <li><a href="https://www.accountingcoach.com" target="_blank">AccountingCoach (Free)</a></li>
+          </ul>
+        </div>
+        <div class="card">
+          <div class="card-cat">🇵🇭 Philippines</div>
+          <div class="card-title">Local Organizations</div>
+          <div class="card-desc">Philippine accounting bodies and remote work resources.</div>
+          <ul class="link-list">
+            <li><a href="https://www.picpa.com.ph" target="_blank">PICPA — Philippine CPAs</a></li>
+            <li><a href="https://www.onlinejobs.ph/blog" target="_blank">OnlineJobs.ph Blog</a></li>
+            <li><a href="https://ched.gov.ph" target="_blank">CHED — Credential Questions</a></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+
+    <!-- ═══════════ START NOW ═══════════ -->
+    <div id="start" class="section">
+      <div class="section-title">🚀 Your Personalized 30-Day Action Plan</div>
+
+      <div class="callout" style="border-color:var(--teal);">
+        <div class="callout-head" style="background:var(--teal-lt);color:var(--teal-dark);">🌱 Starting from Zero — Week 1 Action Plan</div>
+        <ul class="callout-body">
+          <li><strong>Days 1–7:</strong> Sign up for <a href="https://www.accountingcoach.com" target="_blank">AccountingCoach</a> and complete Basic Accounting modules</li>
+          <li><strong>Days 8–14:</strong> Start <a href="https://www.khanacademy.org/economics-finance-domain/core-finance/accounting-and-financial-statements" target="_blank">Khan Academy Accounting</a></li>
+          <li><strong>Days 15–21:</strong> Sign up for a 30-day free <a href="https://quickbooks.intuit.com/online/" target="_blank">QuickBooks Online trial</a> and explore every menu</li>
+          <li><strong>Days 22–30:</strong> Enroll in <a href="https://quickbooks.intuit.com/accountants/training-certification/" target="_blank">QBO ProAdvisor Certification</a> — it's FREE!</li>
+        </ul>
+      </div>
+
+      <div class="callout" style="border-color:var(--navy); margin-top:12px;">
+        <div class="callout-head" style="background:#EBEBEF;color:var(--navy);">🎓 Have an Accounting Degree — Week 1 Action Plan</div>
+        <ul class="callout-body">
+          <li><strong>Days 1–7:</strong> Start <a href="https://quickbooks.intuit.com/accountants/training-certification/" target="_blank">QBO ProAdvisor Certification</a> — aim to finish in 30 days</li>
+          <li><strong>Days 8–14:</strong> Begin <a href="https://www.xero.com/us/partner-program/xero-advisor-certification/" target="_blank">Xero Advisor Certification</a> alongside QBO practice</li>
+          <li><strong>Days 15–21:</strong> Start <a href="https://quickbooks.intuit.com/accountants/training-certification/" target="_blank">QBO ProAdvisor Certification</a> — aim to finish within the month</li>
+          <li><strong>Days 22–30:</strong> Update your <a href="https://www.linkedin.com/jobs/" target="_blank">LinkedIn</a> with US GAAP, QBO, Xero, and Remote keywords</li>
+        </ul>
+      </div>
+
+      <div class="pink-box" style="margin-top:12px;">
+        <strong>💡 Word doc tip:</strong> In Microsoft Word, hold <strong>Ctrl</strong> (Windows) or <strong>Cmd</strong> (Mac) while clicking a link to open it. To make links single-click: go to <strong>File → Options → Advanced</strong> and uncheck "Use Ctrl+Click to follow hyperlink."
+      </div>
+
+      <!-- Motivational footer -->
+      <div class="moti-footer">
+        <h2>The opportunity is real. 🌟</h2>
+        <p>US businesses are actively looking for skilled Filipino accountants.</p>
+        <p>You have what it takes. Now you have the roadmap.</p>
+        <div class="cheer">Go get it! 🎉🇵🇭</div>
+      </div>
+    </div>
+
+  </main>
+</div>
+
+<footer>
+  US Bookkeeper &amp; Accountant Roadmap — Philippines Edition 2026 &nbsp;·&nbsp; Presented by Mary Grace &nbsp;·&nbsp; All links open in a new tab
+</footer>
+
+<script>
+  function setActive(el) {
+    document.querySelectorAll('.sidebar-link').forEach(l => l.classList.remove('active'));
+    if (el) el.classList.add('active');
+    if (window.innerWidth <= 768) closeSidebar();
+  }
+
+  function toggleSidebar() {
+    var s = document.getElementById('sidebar');
+    var o = document.getElementById('sidebar-overlay');
+    var open = s.classList.toggle('open');
+    o.classList.toggle('open', open);
+    document.body.style.overflow = open ? 'hidden' : '';
+  }
+
+  function closeSidebar() {
+    document.getElementById('sidebar').classList.remove('open');
+    document.getElementById('sidebar-overlay').classList.remove('open');
+    document.body.style.overflow = '';
+  }
+
+  // Highlight sidebar link based on scroll position
+  const sections = document.querySelectorAll('.section');
+  const links = document.querySelectorAll('.sidebar-link');
+
+  const observer = new IntersectionObserver(entries => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        const id = entry.target.id;
+        links.forEach(l => {
+          l.classList.toggle('active', l.getAttribute('href') === '#' + id);
+        });
+      }
+    });
+  }, { rootMargin: '-20% 0px -70% 0px' });
+
+  sections.forEach(s => observer.observe(s));
+</script>
+
+</body>
+</html>
